@@ -1,0 +1,28 @@
+<h2>Expensese</h2>
+
+
+<table border="1">
+    <tr>
+        <th>Family Member</th>
+        <th>Expense per day</th>
+        <th>Category</th>
+        <th>Id</th>
+        <th>Actions</th>
+    </tr>
+    <% expenses.forEach( function(expenses) { %>
+        <tr>
+            <td><%= expenses.title %></td>
+            <td><%= expenses.amount %></td>
+            <td><%= expenses.category %></td>
+            <td><%= expenses._id %></td>
+            <td>
+            <a href="/edit/<%= expenses._id %>">Edit</a>
+            <a href="/delete/<%= expenses._id %>" 
+           onclick="return confirm('Are you sure?')">
+           Delete
+        </a>
+        </td>
+        </tr> 
+     
+    <% }); %>
+</table>

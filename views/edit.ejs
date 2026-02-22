@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Expense</title>
+</head>
+<body>
+
+<h2>Edit Expense</h2>
+
+<form action="/update/<%= expense._id %>" method="POST">
+  
+  <input type="text" name="title" value="<%= expense.title %>" required><br><br>
+  
+  <input type="number" name="amount" value="<%= expense.amount %>" required><br><br>
+  
+  <input type="text" name="category" value="<%= expense.category %>" required><br><br>
+  
+  <button type="submit">Update</button>
+
+</form>
+
+<br>
+<a href="/expenses">Back</a>
+
+</body>
+</html>
